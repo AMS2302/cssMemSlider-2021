@@ -16,83 +16,46 @@
 
 <body>
   <div class="wrapper">
-    <header class="header">
-      <div class="container">
-        <h1 class="title">cssMemSlider</h1>
-        <ul class="list">
-          <li class="list__item">
-            <a class="list__link" href="https://github.com/AMS2302">My GitHub</a>
-          </li>
-          <li class="list__item">
-            <a class="list__link" href="https://github.com/rolling-scopes-school/tasks/tree/master/stage1">Course</a>
-          </li>
-          <li class="list__item">
-            <a class="list__link" href="https://github.com/DrDiman/CSS-Mem-Slider"></a>
-          </li>
-        </ul>
-      </div>
-    </header>
-    <main class="main">
-      <div class="container">
-        <div class="grid">
-          <div class="grid__element">
-            <ul class="slider">
-              <li class="slider__item">
-                <img src="assets/img/office.jpg" alt="office" class="slider__img">
-              </li>
-              <li class="slider__item">
-                <img src="assets/img/terrorist.jpg" alt="terrorist" class="slider__img">
-              </li>
-              <li class="slider__item">
-                <img src="assets/img/umnik.jpg" alt="umnik" class="slider__img">
-              </li>
-              <li class="slider__item">
-                <img src="assets/img/tired.jpg" alt="tired" class="slider__img">
-              </li>
-            </ul>
-          </div>
-          <div class="grid__element">
-            <div class="descriptions">
-              <label for="" class="descriptions__item">
-                office
-              </label>
-              <label for="" class="descriptions__item">
-                terrorist
-              </label>
-              <label for="" class="descriptions__item">
-                umnik
-              </label>
-              <label for="" class="descriptions__item">
-                tired
-              </label>
-            </div>
-          </div>
-          <div class="grid__element">
-            <div class="points">
-              <input type="radio" name="point" class="point__item">
-              <input type="radio" name="point" class="point__item">
-              <input type="radio" name="point" class="point__item">
-              <input type="radio" name="point" class="point__item">
-            </div>
+    <div class="container">
+      <div class="slider">
+        <input id="input-1" type="radio" name="point" class="slider__input" checked>
+        <div id="img-1" class="slider__img">
+          <img src="assets/img/office.jpg" alt="office">
+        </div>
+        <p id="text-1" class="slider__text">
+          office
+        </p>
+        <input id="input-2" type="radio" name="point" class="slider__input">
+        <div id="img-2" class="slider__img">
+          <img id="img-2" src="assets/img/terrorist.jpg" alt="terrorist" class="slider__img">
+        </div>
+        <p id="text-2" class="slider__text">
+          terrorist
+        </p>
+        <input id="input-3" type="radio" name="point" class="slider__input">
+        <div id="img-3" class="slider__img">
+          <img src="assets/img/umnik.jpg" alt="umnik">
+        </div>
+        <p id="text-3" class="slider__text">
+          umnik
+        </p>
+        <input id="input-4" type="radio" name="point" class="slider__input">
+        <div id="img-4" class="slider__img">
+          <img id="img-4" src="assets/img/tired.jpg" alt="tired" class="slider__img">
+        </div>
+        <p id="text-4" class="slider__text">
+          tired
+        </p>
+        <div class="slider__points">
+          <div class="points">
+            <label for="input-1" class="points__item"></label>
+            <label for="input-2" class="points__item"></label>
+            <label for="input-3" class="points__item"></label>
+            <label for="input-4" class="points__item"></label>
           </div>
         </div>
       </div>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <ul class="list">
-          <li class="list__item">
-            <a class="list__link" href="https://github.com/AMS2302">My GitHub</a>
-          </li>
-          <li class="list__item">
-            <a class="list__link" href="https://github.com/rolling-scopes-school/tasks/tree/master/stage1">Course</a>
-          </li>
-          <li class="list__item">
-            <a class="list__link" href="https://github.com/DrDiman/CSS-Mem-Slider">Task</a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+    </div>
   </div>
 </body>
 
