@@ -6,6 +6,7 @@ html {
 
 img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -26,7 +27,7 @@ img {
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 7fr 1fr;
   row-gap: 60px;
-  max-height: 100%;
+  height: 100%;
 }
 
 .slider__img, .slider__text {
@@ -46,8 +47,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: #545454;
-  border: 15px solid #808080;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -60,39 +60,70 @@ img {
   line-height: 40px;
   color: #ffffff;
   letter-spacing: 3px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .slider__points {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
   display: flex;
   justify-content: flex-end;
-}
-
-.points {
-  display: flex;
   gap: 20px;
 }
 
-.points__item {
-  display: block;
+.point {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   background-color: #808080;
-  border: 5px solid #808080;
   border-radius: 50%;
+  transition: .4s ease-in-out;
+  cursor: pointer;
 }
+
+.point:hover {
+  background-color: #ffffff;
+}
+
+/* .point__input {
+  -webkit-appearance: none;
+  visibility: hidden;
+} */
+
+/* .point__label {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+} */
 
 #input-1:checked + #img-1, #input-1:checked ~ #text-1 {
   display: block;
+  animation: slide-in .1s linear;
 }
 
 #input-2:checked + #img-2, #input-2:checked ~ #text-2 {
   display: block;
+  animation: slide-in .1s linear;
 }
 
 #input-3:checked + #img-3, #input-3:checked ~ #text-3 {
   display: block;
+  animation: slide-in .1s linear;
 }
 
 #input-4:checked + #img-4, #input-4:checked ~ #text-4 {
   display: block;
+  animation: slide-in .1s linear;
+}
+
+@keyframes slide-in {
+  from {
+    padding-left: 100%;
+  } to {
+    padding-left: 0;
+  }
 }
