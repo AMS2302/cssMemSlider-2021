@@ -7,7 +7,6 @@ html {
 img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 .wrapper {
@@ -16,10 +15,10 @@ img {
 }
 
 .container {
-  max-width: 1500px;
+  max-width: 1360px;
   height: 100%;
   margin: 0 auto;
-  padding: 30px;
+  padding: 5vh 2vw;
 }
 
 .slider {
@@ -49,6 +48,8 @@ img {
   background-color: #545454;
   border-radius: 20px;
   overflow: hidden;
+  border: 5px solid;
+  border-color: red;
 }
 
 .slider__text {
@@ -79,30 +80,29 @@ img {
   width: 40px;
   height: 40px;
   background-color: #808080;
+  border: 3px solid #808080;
   border-radius: 50%;
   transition: .4s ease-in-out;
   cursor: pointer;
+}
+
+.point-inner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
 }
 
 .point:hover {
   background-color: #ffffff;
 }
 
-/* .point__input {
-  -webkit-appearance: none;
-  visibility: hidden;
-} */
-
-/* .point__label {
-  display: block;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-} */
-
 #input-1:checked + #img-1, #input-1:checked ~ #text-1 {
   display: block;
   animation: slide-in .1s linear;
+}
+
+#input-1:checked ~ .slider__points .point-1 .point-inner {
+  background-color: red;
 }
 
 #input-2:checked + #img-2, #input-2:checked ~ #text-2 {
@@ -110,14 +110,26 @@ img {
   animation: slide-in .1s linear;
 }
 
+#input-2:checked ~ .slider__points .point-2 .point-inner {
+  background-color: red;
+}
+
 #input-3:checked + #img-3, #input-3:checked ~ #text-3 {
   display: block;
   animation: slide-in .1s linear;
 }
 
+#input-3:checked ~ .slider__points .point-3 .point-inner {
+  background-color: red;
+}
+
 #input-4:checked + #img-4, #input-4:checked ~ #text-4 {
   display: block;
   animation: slide-in .1s linear;
+}
+
+#input-4:checked ~ .slider__points .point-4 .point-inner {
+  background-color: red;
 }
 
 @keyframes slide-in {
@@ -126,4 +138,10 @@ img {
   } to {
     padding-left: 0;
   }
+}
+
+@media screen and (max-width: 480px) {
+
+
+
 }
